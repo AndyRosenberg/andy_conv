@@ -21,6 +21,10 @@ class String
     res = self.scan(reg)
     res += [self[(0 - left)..-1]]
   end
+
+  def stringcrement(interval = 1, operator = :+, seq = 1)
+    self.to_i.stringcrement(interval, operator, seq)
+  end
 end
 
 class Integer
