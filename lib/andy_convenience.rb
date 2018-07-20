@@ -25,6 +25,18 @@ class String
   def stringcrement(interval = 1, operator = :+, seq = 1)
     self.to_i.stringcrement(interval, operator, seq)
   end
+
+  def increment(interval = 1, operator = :+, seq = 1)
+    self.to_i.increment(interval, operator, seq)
+  end
+
+  def indexment(coll, interval = 1, operator = :+, seq = 1)
+    coll[self.increment(interval, operator, seq)]
+  end
+
+  def idx(coll)
+    coll[self.to_i - 1]
+  end
 end
 
 class Integer
