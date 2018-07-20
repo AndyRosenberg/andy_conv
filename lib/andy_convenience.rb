@@ -64,3 +64,9 @@ class Integer
     library
   end
 end
+
+class Array
+  def /(n)
+    self.each_slice(n).to_a
+  end
+end
