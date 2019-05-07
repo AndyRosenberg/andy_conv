@@ -106,4 +106,13 @@ class Array
   def /(n)
     self.each_slice(n).to_a
   end
+
+  def max_count
+    context = self
+    counts = context.group_by do |i|
+        context.count(i)
+      end.max_by {|k, v| k}.last.uniq
+  
+    counts.one? ? counts.first : counts
+  end
 end
