@@ -13,5 +13,6 @@ Andy's Convenience Methods:
   - alias inc and strc
 - integer to_tkn (generates url-safe token)
 - array divided-by operator
+- array max_count (returns single or multiple of max occurring item)
 
 Docs & more coming soon!
