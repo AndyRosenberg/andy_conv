@@ -108,11 +108,6 @@ class Array
   end
 
   def max_count
-    context = self
-    counts = context.group_by do |i|
-        context.count(i)
-      end.max_by {|k, v| k}.last.uniq
-  
-    counts.one? ? counts.first : counts
+    self.group_by{|i| self.count(i)}.max_by {|k, v| k}.last.uniq
   end
 end
